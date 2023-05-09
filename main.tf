@@ -47,3 +47,4 @@ module "vpc_us_east_1" {
     private_subnets = local.vpcs.us-east-1.private_subnets
     tags = local.common_tags
 }
+ 
