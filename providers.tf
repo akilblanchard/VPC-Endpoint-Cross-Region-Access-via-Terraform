@@ -11,4 +11,4 @@ provider "aws"{
 provider "aws"{
     alias="us-west-3"
     region = "us-east-3"
-}
+} 
