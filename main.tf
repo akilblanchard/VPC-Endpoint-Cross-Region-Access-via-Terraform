@@ -65,15 +65,6 @@ resource "aws_route" "us_east_1-_us_west_2" {
 
 }
 
-resource "aws_vpc_peering_connection" "us_west-2-us_east-1" {
-    vpc_id = module .vpc_us_west_2.vpc_id
-    peer_vpc_id = module.vpc_us_east_1.vpc_cidr_blockpeer_owner_id
-    peer_owner_id = local.aws_account
-    peer_region = "us-east-1"
-    auto_accept = false
-    tags = local.common_tags
-    provider = aws.us-west-2
-}
 
 resource "aws_vpc_peering_connection" "us_west-2-us_east2"{
     vpc_id = module.vpc_us_west_2.vpc_id
